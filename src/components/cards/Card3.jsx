@@ -212,14 +212,14 @@ function Card3() {
                         <div className="avatars -space-x-20">
                           <Link to="profile">
                             <img
-                              src={`img/avatars/avatar_3.png`}
+                              src={`//img/avatarsavatar_3.png`}
                               alt="Avatar"
                               className="avatar avatar-sm"
                             />
                           </Link>
                           <Link to="profile">
                             <img
-                              src={`img/avatars/avatar_2.png`}
+                              src={`//img/avatarsavatar_2.png`}
                               alt="Avatar"
                               className="avatar avatar-sm"
                             />
@@ -284,7 +284,7 @@ function Card3() {
                           <div className="avatars">
                             <Link to="profile">
                               <img
-                                src={`img/avatars/avatar_${val.avatar_img}.png`}
+                                src={`//img/avatarsavatar_${val.avatar_img}.png`}
                                 alt="Avatar"
                                 className="avatar avatar-sm"
                               />
@@ -467,7 +467,7 @@ function Card3() {
                           <div className="avatars">
                             <Link to="profile">
                               <img
-                                src={`img/avatars/avatar_${val.avatar_img}.png`}
+                                src={`//img/avatarsavatar_${val.avatar_img}.png`}
                                 alt="Avatar"
                                 className="avatar avatar-sm"
                               />

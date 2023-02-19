@@ -128,7 +128,7 @@ function HotSellers() {
                             <div className="media">
                               <Link to="profile">
                                 <img
-                                  src={`img/avatars/avatar_${val.img}.png`}
+                                  src={`//img/avatarsavatar_${val.img}.png`}
                                   alt="Avatar"
                                   className="avatar avatar-md"
                                 />
@@ -161,7 +161,7 @@ function HotSellers() {
                             <div className="media">
                               <Link to="profile">
                                 <img
-                                  src={`img/avatars/avatar_${val.img}.png`}
+                                  src={`//img/avatarsavatar_${val.img}.png`}
                                   alt="Avatar"
                                   className="avatar avatar-md"
                                 />
@@ -206,7 +206,7 @@ function HotSellers() {
                             <div className="media">
                               <Link to="profile">
                                 <img
-                                  src={`img/avatars/avatar_${val.img}.png`}
+                                  src={`//img/avatarsavatar_${val.img}.png`}
                                   alt="Avatar"
                                   className="avatar avatar-md"
                                 />
@@ -239,7 +239,7 @@ function HotSellers() {
                             <div className="media">
                               <Link to="profile">
                                 <img
-                                  src={`img/avatars/avatar_${val.img}.png`}
+                                  src={`//img/avatarsavatar_${val.img}.png`}
                                   alt="Avatar"
                                   className="avatar avatar-md"
                                 />

@@ -76,7 +76,7 @@ function RecentlyListed() {
                       <div className="avatars space-x-3">
                         <Link to="profile">
                           <img
-                            src={`img/avatars/avatar_${val.avatar_img1}.png`}
+                            src={`//img/avatarsavatar_${val.avatar_img1}.png`}
                             alt="Avatar"
                             className="avatar avatar-sm"
                           />
@@ -90,7 +90,7 @@ function RecentlyListed() {
                       <div className="avatars space-x-3">
                         <Link to="profile.">
                           <img
-                            src={`img/avatars/avatar_${val.avatar_img1}.png`}
+                            src={`//img/avatarsavatar_${val.avatar_img1}.png`}
                             alt="Avatar"
                             className="avatar avatar-sm"
                           />
@@ -183,7 +183,7 @@ function RecentlyListed() {
                                           </div>
                                           <Link to="profile">
                                             <img
-                                              src={`img/avatars/avatar_1.png`}
+                                              src={`//img/avatarsavatar_1.png`}
                                               alt="Avatar"
                                               className="avatar avatar-md"
                                             />
@@ -220,7 +220,7 @@ function RecentlyListed() {
                                           </div>
                                           <Link to="profile">
                                             <img
-                                              src={`img/avatars/avatar_2.png`}
+                                              src={`//img/avatarsavatar_2.png`}
                                               alt="Avatar"
                                               className="avatar avatar-md"
                                             />

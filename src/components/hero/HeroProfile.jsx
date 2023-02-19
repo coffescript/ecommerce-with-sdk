@@ -33,7 +33,7 @@ const HeroProfile = () => {
                   <div className="avatar_wrap">
                     <img
                       className="avatar avatar-lg"
-                      src="img/avatars/avatar_4.png"
+                      src="//img/avatarsavatar_4.png"
                       alt="avatar"
                     />
                   </div>

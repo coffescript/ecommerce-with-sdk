@@ -1,5 +1,6 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import MONGEPAY from '../../assets/img/logos/mongepay.png';
 
 function Footer() {
   return (
@@ -10,7 +11,7 @@ function Footer() {
             <div className="col-lg-6 space-y-20">
               <div className="footer__logo">
                 <Link to="/">
-                  <img src={`img/logos/mongepay.svg`} alt="logo" id="logo_js_f" />
+                  <img src={MONGEPAY} alt="logo" id="logo_js_f" />
                 </Link>
               </div>
               <p className="footer__text">

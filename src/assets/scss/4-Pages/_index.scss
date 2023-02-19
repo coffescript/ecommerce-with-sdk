@@ -52,7 +52,7 @@
 .demos_wrap {
     position: relative;
     @include before {
-        background: url(../../img/icons/demo_effect.png);
+        background: url(/img/icons/demo_effect.png);
         background-repeat: no-repeat;
         background-size: contain;
         background-position-y: 0;
@@ -279,7 +279,7 @@
         li {
             padding-left: 30px;
             @include before {
-                content: url(../../img/icons/check.svg);
+                content: url(/img/icons/check.svg);
                 height: 20px;
                 width: 20px;
                 left: 0px;

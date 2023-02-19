@@ -37,7 +37,7 @@
     }
     &.is__light {
         background-color: $color_white;
-        background-image: url(../../img/bg/circles.svg);
+        background-image: url(/img/bg/circles.svg);
         background-size: contain;
         background-repeat: no-repeat;
         background-position: right center;
@@ -113,7 +113,7 @@
         &::before {
             content: "";
             opacity: 1;
-            background-image: url(../../img/icons/arrow-left-s-line.svg);
+            background-image: url(/img/icons/arrow-left-s-line.svg);
             width: 32px;
             height: 32px;
             background-repeat: no-repeat;
@@ -146,7 +146,7 @@
         &::before {
             opacity: 1;
             content: "";
-            background-image: url(../../img/icons/arrow-right-s-line.svg);
+            background-image: url(/img/icons/arrow-right-s-line.svg);
             width: 32px;
             height: 32px;
             color: $color_black;

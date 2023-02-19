@@ -82,7 +82,7 @@ function PopularCreators() {
                       <div className="avatars space-x-10">
                         <Link to="Profile">
                           <img
-                            src={`img/avatars/avatar_${val.img}.png`}
+                            src={`//img/avatarsavatar_${val.img}.png`}
                             alt="Avatar"
                             className="avatar avatar-md"
                           />

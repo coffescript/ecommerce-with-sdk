@@ -70,7 +70,7 @@ function Collection2() {
                 <div className="avatars space-x-5">
                   <Link to="profile">
                     <img
-                      src={`img/avatars/avatar_${val.avatar_img}.png`}
+                      src={`//img/avatarsavatar_${val.avatar_img}.png`}
                       alt="Avatar"
                       className="avatar avatar-sm"
                     />

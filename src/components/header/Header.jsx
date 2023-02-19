@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import MobileMenu from './Menu/MobileMenu';
 import MegaMenu from './Menu/MegaMenu';
+import MONGEPAY from '../../assets/img/logos/mongepay.png';
 const HomesMenu = [
   {
     icon: 'home-smile-2',
@@ -52,7 +53,7 @@ const Header = () => {
                 <img
                   className="header__logo"
                   id="logo_js"
-                  src="src/assets/img/logos/mongepay.svg"
+                  src={MONGEPAY}
                   alt="logo"
                 />
               </Link>

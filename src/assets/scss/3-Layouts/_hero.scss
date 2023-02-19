@@ -6,7 +6,7 @@
     z-index: 0;
     @include before {
         left: 0;
-        background: url(../../img/effects/hero.jpg);
+        background: url(/img/effects/hero.jpg);
         width: 476px;
         height: 100%;
         background-repeat: no-repeat;
@@ -112,7 +112,7 @@
         left: 50%;
         transform: translateX(-50%);
         top: -14rem;
-        background: url(../../img/logos/top.svg);
+        background: url(/img/logos/top.svg);
         width: 80rem;
         height: 100%;
         background-repeat: no-repeat;
@@ -150,7 +150,7 @@
         @include card_item;
         background-color: $color_white;
         @include before {
-            background: url(../../img/bg/ce.png);
+            background: url(/img/bg/ce.png);
             background-size: cover;
             height: 25rem;
             width: 25rem;
@@ -159,7 +159,7 @@
             z-index: -1;
         }
         @include after {
-            background: url(../../img/bg/ce.png);
+            background: url(/img/bg/ce.png);
             background-size: cover;
             height: 25rem;
             width: 25rem;
@@ -182,7 +182,7 @@
 
 .hero__3 {
     padding: 100px 0 50px;
-    background-image: url(../../img/bg/effect.svg);
+    background-image: url(/img/bg/effect.svg);
     background-size: 100%;
     background-color: $color_white;
     background-repeat: no-repeat;

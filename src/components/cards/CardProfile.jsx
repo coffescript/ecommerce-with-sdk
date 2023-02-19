@@ -219,14 +219,14 @@ const CardProfile = () => {
                     <div className="avatars -space-x-20">
                       <Link to="profile">
                         <img
-                          src={`img/avatars/avatar_${val.avatar_img1}.png`}
+                          src={`//img/avatarsavatar_${val.avatar_img1}.png`}
                           alt="Avatar"
                           className="avatar avatar-sm"
                         />
                       </Link>
                       <Link to="profile">
                         <img
-                          src={`img/avatars/avatar_${val.avatar_img2}.png`}
+                          src={`//img/avatarsavatar_${val.avatar_img2}.png`}
                           alt="Avatar"
                           className="avatar avatar-sm"
                         />

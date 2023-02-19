@@ -9,6 +9,7 @@ import CardMarketplaceGame from '../components/cards/CardMarketplaceGame';
 import useDocumentTitle from '../components/useDocumentTitle';
 import MenuCategoriesMarket from '../elements/MenuCategoriesMarket';
 import { Link, useHistory } from 'react-router-dom';
+import IMG from '../assets/img/items/gaming/1.png';
 
 const CardItems = [
     {
@@ -141,7 +142,7 @@ const Marketplace = () => {
                                                 <div className="card_head">
                                                     <div to="Item-details">
                                                         <img
-                                                            src={`img/items/gaming/${val.img}.png`}
+                                                            src={IMG}
                                                             alt="nftimage"
                                                         />
                                                     </div>

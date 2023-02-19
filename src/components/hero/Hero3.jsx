@@ -123,12 +123,12 @@ function Hero3() {
                                                 space-x-10">
                           <div className="avatars -space-x-20">
                             <img
-                              src={`img/avatars/avatar_${val.avatar_img1}.png`}
+                              src={`//img/avatarsavatar_${val.avatar_img1}.png`}
                               alt="Avatar"
                               className="avatar avatar-sm"
                             />
                             <img
-                              src={`img/avatars/avatar_${val.avatar_img2}.png`}
+                              src={`//img/avatarsavatar_${val.avatar_img2}.png`}
                               alt="Avatar"
                               className="avatar avatar-sm"
                             />
@@ -181,7 +181,7 @@ function Hero3() {
                           <Link to="profile" className="creators space-x-10">
                             <div className="avatars">
                               <img
-                                src={`img/avatars/avatar_${val.avatar_img}.png`}
+                                src={`//img/avatarsavatar_${val.avatar_img}.png`}
                                 alt="Avatar"
                                 className="avatar avatar-sm"
                               />
