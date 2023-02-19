@@ -8,7 +8,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 
-import ASSET from '../assets/img/bg/contact.png';
+import ASSET from '../assets/img/bg/manual-pay.jpeg';
 
 const ManualPayment = () => {
     const notify = () => toast.success('We have recieved your message');
