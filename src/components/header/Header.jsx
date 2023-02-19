@@ -52,7 +52,7 @@ const Header = () => {
                 <img
                   className="header__logo"
                   id="logo_js"
-                  src="img/logos/mongepay.svg"
+                  src="src/assets/img/logos/mongepay.svg"
                   alt="logo"
                 />
               </Link>
