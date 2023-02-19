@@ -126,13 +126,7 @@ const ItemDetails = () => {
                             <div className="space-y-20">
                                 <h3>{name}</h3>
                                 <div className="d-flex justify-content-between">
-                                    <div className="space-x-10 d-flex align-items-center">
-                                        <p>1 of 1</p>
-                                        <Link to="#" className="likes space-x-3">
-                                            <i className="ri-heart-3-fill" />
-                                            <span className="txt_sm">2.1k</span>
-                                        </Link>
-                                    </div>
+
                                     <div className="space-x-10 d-flex align-items-center">
                                         <div>
                                             <div className="share">

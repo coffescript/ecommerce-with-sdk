@@ -145,10 +145,7 @@ const Marketplace = () => {
                                                             alt="nftimage"
                                                         />
                                                     </div>
-                                                    <div to="#" className="likes space-x-3">
-                                                        <i className="ri-heart-3-fill" />
-                                                        <span className="txt_sm">{val.likes}k</span>
-                                                    </div>
+
                                                 </div>
                                                 {/* =============== */}
                                                 <h6 className="card_title">{val.title}</h6>
