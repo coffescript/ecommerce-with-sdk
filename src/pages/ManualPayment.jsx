@@ -8,6 +8,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 
+import ASSET from '../assets/img/bg/contact.png';
+
 const ManualPayment = () => {
     const notify = () => toast.success('We have recieved your message');
 
@@ -58,7 +60,7 @@ const ManualPayment = () => {
                 <div className="row">
                     <div className="col-md-4 contact__img">
                         <div className="img__wrap">
-                            <img src={`img/bg/contact.png`} alt="contact" />
+                            <img src={ASSET} alt="contact" />
                         </div>
                     </div>
                     <div className="col-md-8 contact__content">

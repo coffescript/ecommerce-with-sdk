@@ -8,6 +8,8 @@ import useDocumentTitle from '../components/useDocumentTitle';
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 
+import ASSET from '../assets/img/items/item_2.png';
+
 // Random component
 const Completionist = () => <span>auction ending soon now!</span>;
 // Renderer callback with condition
@@ -118,7 +120,7 @@ const ItemDetails = () => {
                         <div className="col-lg-6">
                             <img
                                 className="item_img"
-                                src="img/items/item_2.png"
+                                src={ASSET}
                                 alt="ImgPreview"
                             />
                         </div>
