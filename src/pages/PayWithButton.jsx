@@ -82,6 +82,7 @@ const ItemDetails = () => {
             },
             amount: amount,
             currency: "CRC",
+            linkToStore: "https://wa.me/50670217100",
             detail: "this is just a test",
             onComplete: () => console.log('hello monge')
         })

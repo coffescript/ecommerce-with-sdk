@@ -25,7 +25,6 @@ const ManualPayment = () => {
     }, []);
 
     const initFunction = async (businessToken, nombre, identificacion, iban, currency, amount, detail) => {
-        console.log(businessToken, nombre, identificacion, iban, currency, amount, detail);
 
         await window.mongepay.init({
             authToken: businessToken,
@@ -41,10 +40,11 @@ const ManualPayment = () => {
                 },
                 permiteDesembolso: null
             },
-            amount: amount,
+            amount: amount.toString(),
             currency: currency,
             detail: detail,
-            onComplete: () => console.log('hello monge')
+            onComplete: () => console.log('hello monge'),
+            linkToStore: "https://www.tiendamonge.com/"
         })
 
         const mongepay = document.querySelector('.makePayment');
