@@ -44,9 +44,7 @@ const ManualPayment = () => {
             amount: amount,
             currency: currency,
             detail: detail,
-            onComplete: () => console.log('hello monge'),
-            callBackUrl: "https://amm5q8141i.execute-api.us-east-1.amazonaws.com/dev/mongepay/register",
-            callBackAuthHeader: "x-api-key 9nMTxNfJUd9MOWmrRSt3d7jAShvNMgfx7c1MEf7P"
+            onComplete: () => console.log('hello monge')
         })
 
         const mongepay = document.querySelector('.makePayment');
