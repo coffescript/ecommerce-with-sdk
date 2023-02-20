@@ -30,6 +30,7 @@ const ItemDetails = () => {
     const ref = useRef();
     const closeTooltip = () => ref.current.close();
     const [isShare, setShare] = useState(false);
+    const [buttonToken, setButtonToken] = useState(null);
 
     useDocumentTitle('Item Details');
 
@@ -39,13 +40,7 @@ const ItemDetails = () => {
     const amount = location.state.item.amount;
 
     useEffect(() => {
-        console.log('location', location.state.item);
-        // getAuthToken();
-        initFunction();
-
-        const mongepay = document.querySelector('.makePayment');
-        mongepay.classList.add('new-position')
-        // console.log('mongepay',);
+        getAuthToken();
     }, []);
 
 
@@ -70,9 +65,9 @@ const ItemDetails = () => {
         setMore(!isMore);
     };
 
-    const initFunction = async () => {
+    const initFunction = async (token) => {
         await window.mongepay.init({
-            authToken: "eyJhbGciOiJSUzI1NiIsImtpZCI6IjAwQUJCRjQwRkQ4MjA5M0VDRjZFNEJGMUJENzI2OENFQUNFNDg1MURSUzI1NiIsInR5cCI6ImF0K2p3dCIsIng1dCI6IkFLdV9RUDJDQ1Q3UGJrdnh2WEpvenF6a2hSMCJ9.eyJuYmYiOjE2NzY2MjQ4OTUsImV4cCI6MTY3NjYyODQ5NSwiaXNzIjoiaHR0cHM6Ly9yZWcwM3BwZGIwMDEuZ3J1cG9tb25nZS5jb3JwOjQ0MzE2IiwiYXVkIjoiTW9uZ2VQYXlGYWNhZGUiLCJjbGllbnRfaWQiOiJlMjI4MGQ3MS05OTg4LTQ5OWItODNjYS0zMDZkMzQ5OGQwYzMiLCJhcHBpZCI6ImUyMjgwZDcxLTk5ODgtNDk5Yi04M2NhLTMwNmQzNDk4ZDBjMyIsImp0aSI6IkUxMTNDNUY5NkMwMkUwQjcxMEEwQzIyOEY0QUFERTNBIiwiaWF0IjoxNjc2NjI0ODk1LCJzY29wZSI6WyJNb25nZVBheUZhY2FkZSJdfQ.p9SqWkNguqt9S8bdARmD5KO6QYak3whiMG-GyA50Qsuz_uU43ft-_BEQeOHFV0OLzi8oFj_ym_s-3-rG49B3zFa0gu5En1_Sn_HBU7JpecjwWHQ168Fah-42ROnXUXUS0mpNYo4_HqlPQ0JqzysZ8Fph7K-oCXc3VISShXzgXduOIaE8Bl9WQVFIpBKbsGpBBus1g_NjF2b61ztFxUYX1GrFnI1GSoA0jSBIrCXXwHam8rFctzT8G3vliFH2ZnQrUpwiawntUuzmHmfwd-IHaaokUtnQQM5mZNS2o638sh_Sve8X2JK0cMRYVeJY_Svx6yrEc1WGwE0mwnHKpICEBQ",
+            authToken: token,
             cuentaDestino: {
                 nombre: "MOTOMAS",
                 apellido: "S.A",
@@ -97,15 +92,20 @@ const ItemDetails = () => {
     const getAuthToken = async () => {
         const response = await fetch('https://mongepay-uat.grupomonge-ti.com:44316/api/v1.0/Token/ObtenerToken', {
             method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
             body: JSON.stringify({
                 "client_id": "e2280d71-9988-499b-83ca-306d3498d0c3",
                 "client_secret": "test",
                 "scope": "MongePayFacade"
             })
         }).then(res => res.json())
-            .then(resJson => {
-                console.log('resJson', resJson);
-            })
+            .then(resJson => resJson);
+
+        initFunction(response.response.access_token);
+        const mongepay = document.querySelector('.makePayment');
+        mongepay.classList.add('new-position')
     }
 
     return (
