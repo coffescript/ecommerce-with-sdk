@@ -27,6 +27,7 @@ const ManualPayment = () => {
     const initFunction = async (businessToken, nombre, identificacion, iban, currency, amount, detail) => {
 
         await window.mongepay.init({
+            tagId: 'gmg-wrapper',
             authToken: businessToken,
             cuentaDestino: {
                 nombre: nombre,
@@ -208,8 +209,19 @@ const ManualPayment = () => {
                                                 </div>
 
 
-                                                <div className="btn btn-primary" onClick={() => props.handleSubmit()}>
-                                                    Generar Boton de Pago
+
+
+                                                <div style={{ display: 'flex', flexDirection: 'row' }}>
+                                                    <div className="btn btn-primary"
+                                                        onClick={() => props.handleSubmit()}
+                                                        style={{
+                                                            height: 50,
+                                                            marginRight: 50
+                                                        }}
+                                                    >
+                                                        Generar Boton de Pago
+                                                    </div>
+                                                    <div id='gmg-wrapper'></div>
                                                 </div>
                                             </div>
                                         </div>

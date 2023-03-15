@@ -67,6 +67,7 @@ const ItemDetails = () => {
 
     const initFunction = async (token) => {
         await window.mongepay.init({
+            tagId: 'gmg-wrapper',
             authToken: token,
             cuentaDestino: {
                 nombre: "MOTOMAS",
@@ -86,6 +87,8 @@ const ItemDetails = () => {
             detail: "this is just a test",
             onComplete: () => console.log('hello monge')
         })
+
+
     }
 
     const getAuthToken = async () => {
@@ -103,191 +106,202 @@ const ItemDetails = () => {
             .then(resJson => resJson);
 
         initFunction(response.response.access_token);
-        const mongepay = document.querySelector('.makePayment');
-        mongepay.classList.add('new-position')
+        // const mongepay = document.querySelector('.makePayment');
+        // mongepay.classList.add('new-position')
+
+        // const el = document.querySelector('#gmg-wrapper');
+        // console.log(el);
+        // el.classList.add('new-position');
+        // console.log(el.classList.add('new-position'));
     }
 
     return (
-        <div>
-            <Header />
-            <div className="container">
-                <Link to="/home-1" className="btn btn-white btn-sm my-40">
-                    Back to home
-                </Link>
-                <div className="item_details">
-                    <div className="row sm:space-y-20">
-                        <div className="col-lg-6">
-                            <img
-                                className="item_img"
-                                src={ASSET}
-                                alt="ImgPreview"
-                            />
-                        </div>
-                        <div className="col-lg-6">
-                            <div className="space-y-20">
-                                <h3>{name}</h3>
-                                <div className="d-flex justify-content-between">
+        <>
+            <div>
+                <Header />
+                <div className="container">
+                    <Link to="/home-1" className="btn btn-white btn-sm my-40">
+                        Back to home
+                    </Link>
+                    <div className="item_details">
+                        <div className="row sm:space-y-20">
+                            <div className="col-lg-6">
+                                <img
+                                    className="item_img"
+                                    src={ASSET}
+                                    alt="ImgPreview"
+                                />
+                            </div>
+                            <div className="col-lg-6">
+                                <div className="space-y-20">
+                                    <h3>{name}</h3>
+                                    <div className="d-flex justify-content-between">
 
-                                    <div className="space-x-10 d-flex align-items-center">
-                                        <div>
-                                            <div className="share">
-                                                <div className="icon" onClick={toggleShare}>
-                                                    <i className="ri-share-line"></i>
-                                                </div>
-                                                <div
-                                                    className={`dropdown__popup ${isShare ? 'visible' : null
-                                                        } `}>
-                                                    <ul className="space-y-10">
-                                                        <li>
-                                                            <a href="https://www.facebook.com/" rel="noreferrer" target="_blank">
-                                                                <i className="ri-facebook-line"></i>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="https://www.messenger.com/" rel="noreferrer" target="_blank">
-                                                                <i className="ri-messenger-line"></i>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="https://whatsapp.com" target="_blank" rel="noreferrer" >
-                                                                <i className="ri-whatsapp-line"></i>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="https://youtube.com" target="_blank" rel="noreferrer" >
-                                                                <i className="ri-youtube-line"></i>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <div className="more">
-                                                <div className="icon" onClick={toggleMore}>
-                                                    <i className="ri-more-fill"></i>
-                                                </div>
-                                                <div
-                                                    className={`dropdown__popup ${isMore ? 'visible' : null
-                                                        } `}>
-                                                    <ul className="space-y-10">
-                                                        <li>
-                                                            <Popup
-                                                                className="custom"
-                                                                ref={ref}
-                                                                trigger={
-                                                                    <Link
-                                                                        to="#"
-                                                                        className="content space-x-10 d-flex">
-                                                                        <i className="ri-flag-line" />
-                                                                        <span> Report </span>
-                                                                    </Link>
-                                                                }
-                                                                position="bottom center">
-                                                                <div>
-                                                                    <div
-                                                                        className="popup"
-                                                                        id="popup_bid"
-                                                                        tabIndex={-1}
-                                                                        role="dialog"
-                                                                        aria-hidden="true">
-                                                                        <div>
-                                                                            <div className="space-y-20">
-                                                                                <h5>
-                                                                                    Thank you,
-                                                                                    <span className="color_green">
-                                                                                        we've received your report
-                                                                                    </span>
-                                                                                </h5>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </Popup>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="box customBox">
-                                    <div className="space-y-20">
-                                        <div className="d-flex justify-content-between mb-30_reset">
-                                            <div className="d-flex space-x-10 mb-30 nav-tabs">
-                                                <div className="nav-item">
+                                        <div className="space-x-10 d-flex align-items-center">
+                                            <div>
+                                                <div className="share">
+                                                    <div className="icon" onClick={toggleShare}>
+                                                        <i className="ri-share-line"></i>
+                                                    </div>
                                                     <div
-                                                        className="btn btn-white btn-sm"
-                                                        data-toggle="tab"
-                                                        to="#tabs-1"
-                                                        role="tab">
-                                                        Detalles
+                                                        className={`dropdown__popup ${isShare ? 'visible' : null
+                                                            } `}>
+                                                        <ul className="space-y-10">
+                                                            <li>
+                                                                <a href="https://www.facebook.com/" rel="noreferrer" target="_blank">
+                                                                    <i className="ri-facebook-line"></i>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="https://www.messenger.com/" rel="noreferrer" target="_blank">
+                                                                    <i className="ri-messenger-line"></i>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="https://whatsapp.com" target="_blank" rel="noreferrer" >
+                                                                    <i className="ri-whatsapp-line"></i>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="https://youtube.com" target="_blank" rel="noreferrer" >
+                                                                    <i className="ri-youtube-line"></i>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
                                                     </div>
                                                 </div>
                                             </div>
-
-                                        </div>
-                                        <div className="hr" />
-                                        <div className="tab-content">
-                                            <div className="active">
-                                                <p>
-                                                    ¡Hola, chicos! ¡Nueva exploración sobre el diseño web de NFT Marketplace,
-                                                    esta vez me inspiré en uno de mis sitios web favoritos de NFT llamado Rarible (con pago criptográfico)! ¿Qué opinas?
-                                                    No hay ofertas activas todavía. ¡Sé el primero en hacer una oferta!
-                                                </p>
-                                            </div>
-                                            <div className='space-y-20'>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <div className="numbers">
-                                        <div className="row">
-                                            <div className="col-lg-6" style={{ marginTop: 17 }}>
-                                                <div className="space-y-5">
-                                                    <p className="color_text">Oferta Mínima</p>
-                                                    <h4>
-                                                        {amount + ' '}
-                                                        <span className="txt_sm color_text">
-                                                            CRC
-                                                        </span>
-                                                    </h4>
+                                            <div>
+                                                <div className="more">
+                                                    <div className="icon" onClick={toggleMore}>
+                                                        <i className="ri-more-fill"></i>
+                                                    </div>
+                                                    <div
+                                                        className={`dropdown__popup ${isMore ? 'visible' : null
+                                                            } `}>
+                                                        <ul className="space-y-10">
+                                                            <li>
+                                                                <Popup
+                                                                    className="custom"
+                                                                    ref={ref}
+                                                                    trigger={
+                                                                        <Link
+                                                                            to="#"
+                                                                            className="content space-x-10 d-flex">
+                                                                            <i className="ri-flag-line" />
+                                                                            <span> Report </span>
+                                                                        </Link>
+                                                                    }
+                                                                    position="bottom center">
+                                                                    <div>
+                                                                        <div
+                                                                            className="popup"
+                                                                            id="popup_bid"
+                                                                            tabIndex={-1}
+                                                                            role="dialog"
+                                                                            aria-hidden="true">
+                                                                            <div>
+                                                                                <div className="space-y-20">
+                                                                                    <h5>
+                                                                                        Thank you,
+                                                                                        <span className="color_green">
+                                                                                            we've received your report
+                                                                                        </span>
+                                                                                    </h5>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </Popup>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <div className="col-lg-6">
-                                                <div className="space-y-5">
-                                                    <p className="color_text"></p>
-                                                    <div className="txt_lg _bold">
-                                                        {/*
+                                        </div>
+                                    </div>
+
+                                    <div className="box customBox">
+                                        <div className="space-y-20">
+                                            <div className="d-flex justify-content-between mb-30_reset">
+                                                <div className="d-flex space-x-10 mb-30 nav-tabs">
+                                                    <div className="nav-item">
+                                                        <div
+                                                            className="btn btn-white btn-sm"
+                                                            data-toggle="tab"
+                                                            to="#tabs-1"
+                                                            role="tab">
+                                                            Detalles
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div className="hr" />
+                                            <div className="tab-content">
+                                                <div className="active">
+                                                    <p>
+                                                        ¡Hola, chicos! ¡Nueva exploración sobre el diseño web de NFT Marketplace,
+                                                        esta vez me inspiré en uno de mis sitios web favoritos de NFT llamado Rarible (con pago criptográfico)! ¿Qué opinas?
+                                                        No hay ofertas activas todavía. ¡Sé el primero en hacer una oferta!
+                                                    </p>
+                                                </div>
+                                                <div className='space-y-20'>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div className="numbers">
+                                            <div className="row">
+                                                <div className="col-lg-6" style={{ marginTop: 17 }}>
+                                                    <div className="space-y-5">
+                                                        <p className="color_text">Oferta Mínima</p>
+                                                        <h4>
+                                                            {amount + ' '}
+                                                            <span className="txt_sm color_text">
+                                                                CRC
+                                                            </span>
+                                                        </h4>
+                                                    </div>
+                                                </div>
+                                                <div className="col-lg-6">
+                                                    <div className="space-y-5">
+                                                        <p className="color_text"></p>
+                                                        <div className="txt_lg _bold">
+                                                            {/*
                                                         <Countdown
                                                             date={Date.now() + 80000000}
                                                             renderer={renderer}
                                                         />
                                                         */}
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
 
-                                    <div className="d-flex space-x-20" style={{ marginTop: 20 }}>
-                                        <button className="btn btn-lg btn-grad">
-                                            Buy Now
-                                        </button>
+                                        <div className="d-flex space-x-20" style={{ marginTop: 20 }}>
+                                            <div className='d-flex space-x-20'>
+                                                <button className="btn btn-lg btn-grad" style={{ height: 50 }}>
+                                                    Buy Now
+                                                </button>
 
-                                        <div className='space-y-20'></div>
+                                                <div className='space-y-20'></div>
 
-                                        <button className="btn btn-lg btn-grad">Place Bid</button>
+                                                <button className="btn btn-lg btn-grad" style={{ height: 50 }}>Place Bid</button>
+                                            </div>
+
+                                            <div id='gmg-wrapper'></div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <Footer />
             </div>
-            <Footer />
-        </div>
+        </>
     );
 };
 
