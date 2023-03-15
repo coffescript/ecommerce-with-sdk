@@ -291,7 +291,7 @@ const ItemDetails = () => {
                                                 <button className="btn btn-lg btn-grad" style={{ height: 50 }}>Place Bid</button>
                                             </div>
 
-                                            <div id='gmg-wrapper'></div>
+                                            <div id='gmg-wrapper' className='gmg-wrapper'></div>
                                         </div>
                                     </div>
                                 </div>

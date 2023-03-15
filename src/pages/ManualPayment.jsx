@@ -48,8 +48,8 @@ const ManualPayment = () => {
             linkToStore: "https://www.tiendamonge.com/"
         })
 
-        const mongepay = document.querySelector('.makePayment');
-        mongepay.classList.add('new-position')
+        // const mongepay = document.querySelector('.makePayment');
+        // mongepay.classList.add('new-position')
     }
 
     const getAuthToken = async () => {
