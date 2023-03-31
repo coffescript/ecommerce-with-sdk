@@ -83,6 +83,7 @@ const ItemDetails = () => {
             },
             amount: amount,
             currency: "CRC",
+            baseRouteEcommerce: 'https://ecommerce-with-sdk.vercel.app/',
             linkToStore: "https://wa.me/50670217100",
             detail: "this is just a test",
             onComplete: () => console.log('hello monge')
