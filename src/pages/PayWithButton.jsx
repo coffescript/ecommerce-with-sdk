@@ -86,7 +86,7 @@ const ItemDetails = () => {
             baseRouteEcommerce: 'https://ecommerce-with-sdk.vercel.app/',
             linkToStore: "https://wa.me/50670217100",
             detail: "this is just a test",
-            onComplete: () => console.log('hello monge')
+            onComplete: (data) => console.log('hello monge', data)
         })
 
 
