@@ -18,7 +18,7 @@ const CardItems = [
         likes: '1.2',
         img: '1',
         title: 'Dragon 1 modern art',
-        amount: '3000',
+        amount: '30000',
         stock: '4',
     },
     {
