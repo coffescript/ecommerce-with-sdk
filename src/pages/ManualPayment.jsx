@@ -44,6 +44,8 @@ const ManualPayment = () => {
             amount: amount.toString(),
             currency: currency,
             detail: detail,
+            aplicaLineaCredito: true,
+            aplicaSeguroSaldoDeudor: true,
             onComplete: () => console.log('hello monge'),
             linkToStore: "https://www.tiendamonge.com/"
         })
