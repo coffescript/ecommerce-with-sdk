@@ -84,7 +84,7 @@ const ItemDetails = () => {
             amount: amount,
             currency: "CRC",
             aplicaLineaCredito: true,
-            aplicaSeguroSaldoDeudor: true,
+            // aplicaSeguroSaldoDeudor: true,
             baseRouteEcommerce: 'https://ecommerce-with-sdk.vercel.app/',
             detail: "this is just a test",
             onComplete: (data) => console.log('hello monge', data)
