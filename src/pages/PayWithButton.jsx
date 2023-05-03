@@ -83,7 +83,7 @@ const ItemDetails = () => {
             },
             amount: amount,
             currency: "CRC",
-            aplicaLineaCredito: true,
+            aplicaLineaCredito: false,
             // aplicaSeguroSaldoDeudor: true,
             baseRouteEcommerce: 'https://ecommerce-with-sdk.vercel.app/',
             detail: "this is just a test",
