@@ -85,7 +85,7 @@ const ItemDetails = () => {
             currency: "CRC",
             aplicaLineaCredito: true,
             // aplicaSeguroSaldoDeudor: true,
-            baseRouteEcommerce: 'https://ecommerce-with-sdk02.vercel.app/',
+            baseRouteEcommerce: 'https://ecommerce-with-sdk.vercel.app/',
             detail: "this is just a test",
             onComplete: (data) => console.log('hello monge', data)
         })
@@ -94,7 +94,7 @@ const ItemDetails = () => {
     }
 
     const getAuthToken = async () => {
-        const response = await fetch('https://mongepay-uat02.grupomonge-ti.com:44316/api/v1.0/Token/ObtenerToken', {
+        const response = await fetch('https://mongepay-uat.grupomonge-ti.com:44316/api/v1.0/Token/ObtenerToken', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
